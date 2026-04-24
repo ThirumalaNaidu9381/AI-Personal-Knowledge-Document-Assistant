@@ -7,46 +7,77 @@ This project is a production-style AI Document Assistant that allows users to up
 It uses a Retrieval-Augmented Generation (RAG) pipeline:
 
 Extracts and chunks documents
+
 Converts them into embeddings
+
 Stores them in a FAISS vector database
+
 Retrieves relevant context for user queries
+
 Generates answers using a large language model
 
 The system ensures:
 
 ✅ Accurate retrieval
+
 ✅ Source transparency
+
 ✅ Scalable architecture
 
 ⚙️ Tech Stack
+
 Backend: FastAPI
+
 Frontend: Streamlit
+
 Vector DB: FAISS (with persistence)
+
 Embeddings: Google Gemini (langchain_google_genai)
+
 LLM: Gemini (Generative AI)
+
 Async Processing: Celery + Redis
+
 Language: Python
 
 🔄 Architecture Diagram
+
 User (Streamlit UI)
+
         ↓
+
 FastAPI Backend (/upload, /query)
+
         ↓
-Document Pipeline
-(PDF → Text → Clean → Chunk)
+
+Document Pipeline(PDF → Text → Clean → Chunk)
+
         ↓
+
 Embedding Service (Gemini)
+
         ↓
+
 FAISS Vector Store (Persistent)
+
         ↓
+
 Top-K Retrieval
+
         ↓
+
 Re-ranking Layer
+
         ↓
+
 Context Builder
+
         ↓
+
 LLM (Gemini)
+
         ↓
+
 Final Answer + Sources
 
 🚀 How to Run
@@ -54,6 +85,7 @@ Final Answer + Sources
 1️⃣ Clone the repo
 
 git clone https://github.com/your-username/ai-document-assistant.git
+
 cd ai-document-assistant
 
 2️⃣ Install dependencies
@@ -77,17 +109,27 @@ streamlit run streamlit_app.py
 http://localhost:8501
 
 💡 Features
+
 📄 Upload PDF/TXT documents
+
 🔍 Semantic search using embeddings
+
 🧠 Context-aware AI answers
+
 📚 Source attribution (doc_id, chunk_id)
+
 ⚡ FAISS-based fast retrieval
+
 💾 Persistent vector storage
+
 🔄 Re-ranking for better accuracy
+
 💬 Chat-based UI (Streamlit)
+
 ⚙️ Scalable architecture with Celery
 
 📸 Screenshots
+
 🔹 Upload Interface
 
 <img width="418" height="525" alt="image" src="https://github.com/user-attachments/assets/8610866d-1f6f-4c50-ac25-478bad741938" />
