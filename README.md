@@ -50,18 +50,30 @@ LLM (Gemini)
 Final Answer + Sources
 
 🚀 How to Run
+
 1️⃣ Clone the repo
+
 git clone https://github.com/your-username/ai-document-assistant.git
 cd ai-document-assistant
+
 2️⃣ Install dependencies
+
 pip install -r requirements.txt
+
 3️⃣ Set environment variables
+
 export GOOGLE_API_KEY=your_api_key
+
 4️⃣ Run Backend
+
 docker-compose up
+
 5️⃣ Run Streamlit UI
+
 streamlit run streamlit_app.py
+
 6️⃣ Open UI
+
 http://localhost:8501
 
 💡 Features
